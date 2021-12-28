@@ -48,7 +48,7 @@ class Employee {
         return employeeSalary;
     }
     public static void main(String[] args) {
-        List<Employee> employeeList = new ArrayList<Employee>();
+        List<Employee> employeeList = new ArrayList<>();
         Employee emp1 = new Employee(59, "Sidharth", 21, "Male", "HR", 2015, 24000.0);
         Employee emp2 = new Employee(101, "Rohit", 21, "Male", "Sales", 2018, 25000.0);
         Employee emp3 = new Employee(85, "Gowthami", 21, "Female", "Marketing", 2020, 28700.0);
@@ -71,12 +71,15 @@ class Employee {
                 .sorted()
                 .forEach(System.out::println);
         for(Employee emp : employeeList){
-            emp.searchEmployeeName("Arbaaz");}
+            emp.searchEmployeeName("Sangeetha");}
     }
     private void searchEmployeeName(String getName){
         if(getName.matches(employeeName)){
             System.out.println("Searched Employee : "+getName+" is  found");
             display();
+        }
+        else{
+            System.out.println();
         }
     }
     private void display(){
